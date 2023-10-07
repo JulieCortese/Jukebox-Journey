@@ -1,4 +1,4 @@
-# Hi this is the first commit to this repo
+# Made by Julie, start date 10/7/2023! I came up with this idea at 1am. hopefully it'll still seem good later!
 import pygame
 import sys
 from constants import *
