@@ -43,6 +43,8 @@ def draw_game_start(screen):
 
     while True:
         for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                sys.exit()
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if start_rectangle.collidepoint(event.pos):
                     mode = 1  # start game
@@ -54,14 +56,11 @@ def draw_game_start(screen):
 
 
 def main():
-    pygame.init()
     while True:
         pygame.init()
         screen = pygame.display.set_mode((WIDTH, HEIGHT))
-        pygame.display.set_caption("Sudoku")
-
+        pygame.display.set_caption("Jukebox Journey")
         begin = draw_game_start(screen)
-
         screen.fill(BG_COLOR)
 
         if begin == 1:
@@ -75,3 +74,6 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
+
+
+main()
